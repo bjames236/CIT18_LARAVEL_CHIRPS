@@ -7,6 +7,30 @@
                 placeholder="{{ __('What\'s on your mind?') }}"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
             >{{ old('message') }}</textarea>
+            <textarea
+                name="firstName"
+                placeholder="{{ __('Enter your first Name') }}"
+            >{{ old('firstName') }}</textarea>
+            <textarea
+                name="lastName"
+                placeholder="{{ __('Enter your last Name') }}"
+            >{{ old('firstName') }}</textarea>
+            <textarea
+                name="middleName"
+                placeholder="{{ __('Enter your middle Name') }}"
+            >{{ old('firstName') }}</textarea>
+            <textarea
+                name="address"
+                placeholder="{{ __('Enter your address') }}"
+            >{{ old('firstName') }}</textarea>
+            <textarea
+                name="email"
+                placeholder="{{ __('Enter your email') }}"
+            >{{ old('firstName') }}</textarea>
+            <textarea
+                name="contactNumber"
+                placeholder="{{ __('Enter your contact number') }}"
+            >{{ old('firstName') }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <x-primary-button class="mt-4">{{ __('Chirp') }}</x-primary-button>
         </form>
@@ -51,6 +75,12 @@
                             @endif
                         </div>
                         <p class="mt-4 text-lg text-gray-900">{{ $chirp->message }}</p>
+                        <p class="mt-4 text-lg text-gray-900">{{ $chirp->firstName }}</p>
+                        <p class="mt-4 text-lg text-gray-900">{{ $chirp->lastName }}</p>
+                        <p class="mt-4 text-lg text-gray-900">{{ $chirp->middleName }}</p>
+                        <p class="mt-4 text-lg text-gray-900">{{ $chirp->address }}</p>
+                        <p class="mt-4 text-lg text-gray-900">{{ $chirp->email }}</p>
+                        <p class="mt-4 text-lg text-gray-900">{{ $chirp->contactNumber }}</p>
                     </div>
                 </div>
             @endforeach
